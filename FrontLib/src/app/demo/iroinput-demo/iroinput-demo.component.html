@@ -1,0 +1,158 @@
+<div class="iro-component-detail-container">
+    <div class="iro-component-header-container width100">
+      <h1>Input</h1>
+      <p>It provides the same functionality as a native <code>&lt;input /&gt;</code>
+        enhanced with Material Design styling and animations.</p>
+    </div>
+    <div class="iro-component-attribute-container width100">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Attributes Details : </h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>
+              <span class="thickFont">isRequired</span> : <span><code>boolean</code></span>
+              <p>To make input field required, enable this flag</p>
+            </li>
+            <li>
+              <span class="thickFont">inputType</span> : <span><code>string</code></span>
+              <p>Set type of the input</p>
+            </li>
+            <li>
+              <span class="thickFont">placeholder</span> : <span><code>string</code></span>
+              <p>It is a placeholder string for the input field.</p>
+            </li><li>
+            <span class="thickFont">value</span> : <span><code>string</code></span>
+            <p>It is a value given to input field.</p>
+          </li><li>
+            <span class="thickFont">isReadOnly</span> : <span><code>boolean</code></span>
+            <p>It makes input field readonly.</p>
+          </li><li>
+            <span class="thickFont">customFormControl</span> : <span><code>FormControl</code></span>
+            <p>Override pre-defined validations of input</p>
+          </li><li>
+            <span class="thickFont">customFormControlData</span> : <span><code>object</code></span>
+            <p>Input control messages are defined inside this object. For example: if field is required the meesage
+              shown will be given against required key.</p>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="iro-component-usage-container width100">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Example : </h3>
+        </div>
+        <div class="panel-body">
+          <mat-tab-group class="demo-tab-group" [dynamicHeight]="true">
+            <mat-tab label="Example">
+              <div class="demo-tab-content">
+                <div style="width: 280px;">
+                  <h4 class="thickFont" style="margin-bottom: 20px;">Input box</h4>
+                  <app-iro-inputbox [placeholder]="input_1_placeholder"
+                                    [isRequired]="input_1_required"
+                                    [inputType]="input_1_type"
+                                    [(value)]="input_1_modal"
+                                    [isReadOnly]="input_1_readOnly"
+                  ></app-iro-inputbox>
+  
+                  <h4 class="thickFont" style="margin: 20px 0;">Readonly</h4>
+                  <app-iro-inputbox [placeholder]="input_2_placeholder"
+                                    [isRequired]="input_1_required"
+                                    [inputType]="input_2_type"
+                                    [(value)]="input_2_modal"
+                                    [isReadOnly]="input_2_readOnly"
+                  ></app-iro-inputbox>
+  
+                  <h4 class="thickFont" style="margin: 20px 0;">Required</h4>
+                  <app-iro-inputbox [placeholder]="input_3_placeholder"
+                                    [isRequired]="input_2_required"
+                                    [inputType]="input_3_type"
+                                    [(value)]="input_3_modal"
+                                    [isReadOnly]="input_1_readOnly"
+                                    [customFormControl]="customFormControl"
+                                    [customFormControlData]="customFormControlData"
+                  ></app-iro-inputbox>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Typescript">
+              <div class="demo-tab-content">
+          <pre><code class="language-typescript">
+  export class IroinputDemoComponent implements OnInit &#123;
+  
+    // --- iro inputbox
+    input_1_placeholder = 'Enter Password';
+    input_2_placeholder = 'First Name';
+    input_3_placeholder = 'Email Id';
+    input_1_required = false;
+    input_2_required = true;
+    input_1_type = 'password';
+    input_2_type = 'text';
+    input_3_type = 'email';
+    input_1_modal = '';
+    input_2_modal = 'Roger';
+    input_3_modal = '';
+    input_1_readOnly = false;
+    input_2_readOnly = true;
+  
+    customFormControl = new FormControl('', [
+      Validators.required,
+      Validators.pattern(EMAIL_REGEX)
+    ]);
+  
+    customFormControlData = &#123;
+      pattern: 'Please enter a valid email address',
+      required: 'Email is Required'
+    &#125;;
+  
+    constructor() &#123; &#125;
+  
+    ngOnInit() &#123;
+    &#125;
+  
+  
+  
+  &#125;
+          </code></pre>
+              </div>
+            </mat-tab>
+            <mat-tab label="HTML">
+              <div class="demo-tab-content">
+                <pre><code class="language-markup">
+  <h4 class="thickFont colorLightRed"  style="margin-bottom: 20px;">Input box</h4>
+  &lt;app-iro-inputbox [placeholder]="input_1_placeholder"
+                    [isRequired]="input_1_required"
+                    [inputType]="input_1_type"
+                    [(value)]="input_1_modal"
+                    [isReadOnly]="input_1_readOnly"
+  &gt;&lt;/app-iro-inputbox&gt;
+  
+  <h4 class="thickFont colorLightRed" style="margin: 20px 0;">Readonly</h4>
+  &lt;app-iro-inputbox [placeholder]="input_2_placeholder"
+                    [isRequired]="input_1_required"
+                    [inputType]="input_2_type"
+                    [(value)]="input_2_modal"
+                    [isReadOnly]="input_2_readOnly"
+  &gt;&lt;/app-iro-inputbox&gt;
+  
+  <h4 class="thickFont colorLightRed" style="margin: 20px 0;">Required</h4>
+  &lt;app-iro-inputbox [placeholder]="input_3_placeholder"
+                    [isRequired]="input_2_required"
+                    [inputType]="input_3_type"
+                    [(value)]="input_3_modal"
+                    [isReadOnly]="input_1_readOnly"
+                    [customFormControl]="customFormControl"
+                    [customFormControlData]="customFormControlData"
+  &gt;&lt;/app-iro-inputbox&gt;
+                </code></pre>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+  

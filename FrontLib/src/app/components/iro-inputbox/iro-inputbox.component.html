@@ -1,0 +1,22 @@
+
+
+<section class="iro-inputbox-container width100">
+    <mat-form-field [color]="color" style="margin-bottom: 15px;" class="width100">
+      <input matInput [placeholder]="placeholder"
+             [required]="isRequired"
+             [type]="inputType"
+             [formControl]="customFormControl"
+             [(ngModel)]="value"
+             [readonly]="isReadOnly"
+             [name]="name"
+             (input)="onInput()"
+      >
+      <mat-error *ngIf="customFormControl.hasError('pattern')">
+        {{ customFormControlData.pattern }}
+      </mat-error>
+      <mat-error *ngIf="customFormControl.hasError('required')">
+        {{ customFormControlData.required }}
+      </mat-error>
+    </mat-form-field>
+  </section>
+  

@@ -1,0 +1,69 @@
+// iro-background assets styles
+
+// --- basic styles --- //
+.generalBG {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// --- icon urls --- //
+
+.hamburgerIcon {
+  background-image: url("../assets/images/hamburger.png");
+}
+
+.infoIcon {
+  background-image: url("../assets/images/info.png");
+}
+
+.notificationIcon {
+  background-image: url("../assets/images/notification.png");
+}
+
+.searchIcon {
+  background-image: url("../assets/images/search.png");
+}
+
+.userPlaceholderIcon {
+  background-image: url("../assets/images/user_placeholder.png");
+}
+
+.plusIcon {
+  background-image: url("../assets/images/plus.png");
+}
+
+// --- icon styles --- //
+
+.hamburgerIconContainer {
+  width: 25px;
+  height: 21px;
+}
+
+.infoIconContainer {
+  width: 25px;
+  height: 25px;
+}
+
+.notificationIconContainer, .searchIconContainer, .userPlaceholderIconContainer {
+  width: 29px;
+  height: 33px;
+}
+
+.plusIconContainer {
+  width: 30px;
+  height: 30px;
+}
+
+.cass_icon {
+  background-image: url("../assets/images/cass.png");
+}
+
+.cass_icon_disable {
+  background-image: url("../assets/images/cass_disable.png");
+}

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./variables";
+
+.demo-tab-content{
+  padding: 25px 15px;
+}
+
+pre code {
+  font-size: 16px;
+}
+
+.iro-component-header-container {
+  margin-bottom: 20px;
+}
+
+// file upload button cursor issue for webkit based browser
+::-webkit-file-upload-button {
+  cursor:pointer;
+}

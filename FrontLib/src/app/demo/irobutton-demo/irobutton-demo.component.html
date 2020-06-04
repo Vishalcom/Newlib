@@ -1,0 +1,117 @@
+<div class="iro-component-detail-container">
+  <div class="iro-component-header-container width100">
+    <h1>Button</h1>
+    <p>It provides the same functionality as a native <code>&lt;input type="button"&gt;</code>
+      enhanced with Material Design styling and animations.</p>
+  </div>
+  <div class="iro-component-attribute-container width100">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>Attributes Details : </h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li>
+            <span class="thickFont">title</span> : <span><code>String</code></span>
+            <p>This is the component title shown after the component element. Also on click of this component
+              you can toggle the component element.</p>
+          </li>
+          <li>
+            <span class="thickFont">color</span> : <span><code>String</code></span>
+            <p>Set theme of component with color attribute</p>
+          </li>
+          <li>
+            <span class="thickFont">fill</span> : <span><code>Boolean</code></span>
+            <p>Filled or outline button</p>
+          </li>
+          <li>
+            <span class="thickFont">isDisabled</span> : <span><code>Boolean</code></span>
+            <p>to make button disabled</p>
+          </li>
+          <li>
+            <span class="thickFont">rounded</span> : <span><code>Boolean</code></span>
+            <p>to make button rounded</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="iro-component-usage-container width100">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>Example : </h3>
+      </div>
+      <div class="panel-body">
+
+        <mat-tab-group class="demo-tab-group" [dynamicHeight]="true">
+          <mat-tab label="Example">
+            <div class="demo-tab-content">
+              <div style="width: 280px;">
+                <div>
+                  <h4 class="thickFont">Primary Button:</h4>
+                  <div fxLayout="row" fxLayoutGap="20px">
+                    <div>
+                      <app-iro-button color="primary" title="Active button" rounded="true"></app-iro-button>
+                    </div>
+                    <div>
+                      <app-iro-button color="primary" title="Active button"></app-iro-button>
+                    </div>  
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="thickFont">Outline Button:</h4>
+                  <div fxLayout="row" fxLayoutGap="20px">
+                    <app-iro-button color="primary" fill=false rounded="true" title="Outline button"></app-iro-button>
+                    <app-iro-button color="primary" fill=false title="Outline button"></app-iro-button>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="thickFont">Disabled Button:</h4>
+                  <div fxLayout="row" fxLayoutGap="20px">
+
+                    <app-iro-button color="cancel" fill=false title="Disabled button" isDisabled="true" rounded="true"></app-iro-button>
+                    <app-iro-button color="cancel" title="Disabled button" isDisabled="true"></app-iro-button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Typescript">
+            <div class="demo-tab-content">
+		<pre><code class="language-typescript">
+export class IrobuttonDemoComponent implements OnInit &#123;
+
+  constructor() &#123; &#125;
+
+  ngOnInit() &#123;
+  &#125;
+
+&#125;
+		</code></pre>
+            </div>
+          </mat-tab>
+          <mat-tab label="HTML">
+            <div class="demo-tab-content">
+              <pre><code class="language-markup">
+<h4 class="thickFont colorLightRed" style="margin: 10px 0;">Primary Button</h4>
+&lt;app-iro-button color="active" title="Active button"&gt;&lt;/app-iro-button&gt;
+
+<h4 class="thickFont colorLightRed" style="margin: 10px 0;">Accent Button</h4>
+&lt;app-iro-button color="approve" title="Accent button"&gt;&lt;/app-iro-button&gt;
+
+<h4 class="thickFont colorLightRed" style="margin: 10px 0;">Disabled</h4>
+&lt;app-iro-button color="" isDisabled="true" title="Disabled button"&gt;&lt;/app-iro-button&gt;
+              </code></pre>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>  
+</div>
+
+
+<iro-button [disabled]="true" title="Raised"></iro-button>

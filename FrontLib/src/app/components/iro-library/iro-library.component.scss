@@ -1,0 +1,115 @@
+@import "../../../styles/variables.scss";
+
+
+// library styles
+#wrapper {
+  padding-left: 10%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+    position: fixed;
+    left: 250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #fff;
+    transition: all 0.5s ease;
+    box-shadow: 0px 10px 10px 10px #dadada;
+}
+
+
+#wrapper #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper #page-content-wrapper {
+  position: relative;
+  margin-right: 0;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+  text-align: left;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+  font-size: 18px;
+  font-family: RobotoLight, sans-serif;
+  max-width: 100%;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+   color: #fff;
+  //color: $iro-color-text-bold-dark;
+  //background: rgba(167, 165, 165, 0.4);
+  font-weight: bold;
+  background-color: $iro-color-primary-dark;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  //color: $iro-color-text-bold-dark;
+  background: none;
+  max-width: 100%;
+}
+
+#sidebar-wrapper {
+  .active {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    //color: $iro-color-text-bold-dark;
+    //background: rgba(167, 165, 165, 0.4);
+    background-color: $iro-color-primary-dark;
+  }
+}
+
+@media(min-width:768px) {
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+}
